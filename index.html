@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Last War Season 5 — Alliance Guide #1075 QueenRae</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rye&family=Oswald:wght@400;600;700&family=Lato:wght@400;700&display=swap');
+
+    :root {
+      --bg:        #1a110a;
+      --parchment: #f5e6c8;
+      --parchment2:#eddba8;
+      --brown:     #5c3317;
+      --dark-brown:#2e1a0e;
+      --gold:      #c9922a;
+      --gold-light:#f0c060;
+      --red:       #8b1a1a;
+      --green:     #2d5a27;
+      --text:      #2e1a0e;
+      --border:    #8b6340;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      font-family: 'Lato', sans-serif;
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(180deg, #3d1f0a 0%, #1a110a 100%);
+      text-align: center;
+      padding: 2rem 1rem 1.5rem;
+      border-bottom: 4px solid var(--gold);
+    }
+    .hero h1 {
+      font-family: 'Rye', serif;
+      font-size: clamp(2rem, 6vw, 4rem);
+      color: var(--gold-light);
+      text-shadow: 3px 3px 0 #000, 0 0 20px rgba(200,150,40,0.5);
+      letter-spacing: 2px;
+    }
+    .hero .subtitle {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(1rem, 3vw, 1.6rem);
+      color: var(--parchment);
+      letter-spacing: 6px;
+      margin-top: .3rem;
+    }
+    .hero .badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--dark-brown);
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      padding: .2rem .8rem;
+      border-radius: 4px;
+      margin-top: .6rem;
+      font-size: .9rem;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--dark-brown);
+      border-bottom: 3px solid var(--gold);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .3rem;
+      padding: .5rem .5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav button {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      font-size: .85rem;
+      letter-spacing: 1px;
+      background: transparent;
+      color: var(--parchment);
+      border: 2px solid transparent;
+      padding: .35rem .8rem;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all .2s;
+      text-transform: uppercase;
+    }
+    nav button:hover { color: var(--gold-light); border-color: var(--gold); }
+    nav button.active {
+      background: var(--gold);
+      color: var(--dark-brown);
+      border-color: var(--gold);
+    }
+
+    /* ── SECTIONS ── */
+    .section { display: none; padding: 1.5rem 1rem 3rem; max-width: 960px; margin: 0 auto; }
+    .section.active { display: block; }
+
+    /* ── CARDS / PANELS ── */
+    .card {
+      background: var(--parchment);
+      border: 3px solid var(--border);
+      border-radius: 8px;
+      padding: 1.2rem 1.4rem;
+      margin-bottom: 1.2rem;
+      box-shadow: 4px 4px 0 rgba(0,0,0,.4);
+    }
+    .card.dark {
+      background: var(--dark-brown);
+      color: var(--parchment);
+      border-color: var(--gold);
+    }
+    .card.warning {
+      background: #3d1f0a;
+      border: 3px solid var(--red);
+      color: var(--parchment);
+    }
+    .card.success {
+      background: #1a2e18;
+      border: 3px solid var(--green);
+      color: var(--parchment);
+    }
+
+    h2.section-title {
+      font-family: 'Rye', serif;
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      color: var(--gold-light);
+      text-align: center;
+      margin-bottom: 1.2rem;
+      text-shadow: 2px 2px 0 #000;
+    }
+    h3.card-title {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: .6rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    h3.card-title .icon { font-size: 1.3rem; }
+
+    /* ── GRID ── */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 600px) { .grid-2 { grid-template-columns: 1fr; } }
+
+    /* ── LISTS ── */
+    ul.guide-list { list-style: none; padding: 0; }
+    ul.guide-list li {
+      padding: .35rem 0 .35rem 1.4rem;
+      position: relative;
+      border-bottom: 1px solid rgba(94,56,24,.2);
+      line-height: 1.4;
+      font-size: .95rem;
+    }
+    ul.guide-list li:last-child { border-bottom: none; }
+    ul.guide-list li::before {
+      content: '★';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: .75rem;
+      top: .45rem;
+    }
+    .card.dark ul.guide-list li,
+    .card.warning ul.guide-list li,
+    .card.success ul.guide-list li { border-bottom-color: rgba(255,255,255,.1); }
+
+    /* ── TAG BADGES ── */
+    .tag {
+      display: inline-block;
+      font-family: 'Oswald', sans-serif;
+      font-size: .75rem;
+      font-weight: 700;
+      padding: .1rem .5rem;
+      border-radius: 3px;
+      letter-spacing: .5px;
+      margin-right: .3rem;
+    }
+    .tag.neutral { background: var(--green); color: #fff; }
+    .tag.owned   { background: var(--red);   color: #fff; }
+    .tag.warn    { background: #c97c00;       color: #fff; }
+    .tag.tip     { background: var(--gold);   color: var(--dark-brown); }
+
+    /* ── CHECKLIST ── */
+    .checklist-item {
+      display: flex;
+      align-items: flex-start;
+      gap: .8rem;
+      padding: .5rem .4rem;
+      border-bottom: 1px solid rgba(94,56,24,.2);
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background .15s;
+    }
+    .checklist-item:hover { background: rgba(200,150,50,.15); }
+    .checklist-item input[type=checkbox] {
+      width: 1.2rem;
+      height: 1.2rem;
+      flex-shrink: 0;
+      cursor: pointer;
+      accent-color: var(--gold);
+      margin-top: .15rem;
+    }
+    .checklist-item label {
+      cursor: pointer;
+      line-height: 1.4;
+      font-size: .95rem;
+    }
+    .checklist-item.checked label { text-decoration: line-through; opacity: .6; }
+
+    /* ── RECIPE GRID ── */
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: .8rem;
+    }
+    .recipe-card {
+      background: var(--parchment2);
+      border: 2px solid var(--border);
+      border-radius: 6px;
+      padding: .8rem;
+      text-align: center;
+      box-shadow: 2px 2px 0 rgba(0,0,0,.3);
+    }
+    .recipe-card .recipe-icon { font-size: 2rem; margin-bottom: .3rem; }
+    .recipe-card h4 {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: .9rem;
+      margin-bottom: .3rem;
+      color: var(--brown);
+    }
+    .recipe-card .bonus {
+      font-size: .8rem;
+      color: var(--green);
+      font-weight: 700;
+      margin-bottom: .3rem;
+    }
+    .recipe-card .bonus span { display: block; }
+    .recipe-card .how {
+      font-size: .75rem;
+      color: var(--brown);
+      border-top: 1px solid var(--border);
+      padding-top: .3rem;
+      margin-top: .3rem;
+    }
+
+    /* ── TRAIN SCHEDULE ── */
+    .train-row {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .4rem .2rem;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      font-size: .9rem;
+    }
+    .train-icon { font-size: 1.4rem; }
+    .train-time {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      color: var(--gold-light);
+      min-width: 70px;
+    }
+
+    /* ── TRADE LOG TABLE ── */
+    table.trade-log {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .9rem;
+    }
+    table.trade-log th {
+      background: var(--brown);
+      color: var(--parchment);
+      font-family: 'Oswald', sans-serif;
+      padding: .4rem .6rem;
+      text-align: left;
+    }
+    table.trade-log td {
+      padding: .35rem .6rem;
+      border-bottom: 1px solid var(--border);
+    }
+    table.trade-log tr:nth-child(even) td { background: rgba(94,56,24,.1); }
+
+    /* ── UPGRADE STEPS ── */
+    .upgrade-step {
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+      padding: .4rem .2rem;
+      border-bottom: 1px dashed var(--border);
+    }
+    .step-num {
+      background: var(--gold);
+      color: var(--dark-brown);
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      min-width: 1.8rem;
+      height: 1.8rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .85rem;
+      flex-shrink: 0;
+    }
+    .step-text { font-size: .9rem; }
+
+    /* ── RESOURCE PILLS ── */
+    .resource-row { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: .5rem; }
+    .resource-pill {
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      background: var(--dark-brown);
+      border: 2px solid var(--gold);
+      color: var(--parchment);
+      border-radius: 20px;
+      padding: .3rem .8rem;
+      font-family: 'Oswald', sans-serif;
+      font-size: .85rem;
+    }
+    .resource-pill .ricon { font-size: 1.1rem; }
+
+    /* ── PRIORITY LIST ── */
+    .priority-item {
+      display: flex;
+      align-items: flex-start;
+      gap: .7rem;
+      padding: .5rem 0;
+      border-bottom: 1px solid rgba(94,56,24,.2);
+    }
+    .priority-num {
+      background: var(--red);
+      color: #fff;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      min-width: 1.8rem;
+      height: 1.8rem;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .9rem;
+      flex-shrink: 0;
+    }
+
+    /* ── ALERT BANNER ── */
+    .alert-banner {
+      background: var(--red);
+      color: #fff;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      text-align: center;
+      padding: .7rem 1rem;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: rgba(255,255,255,.3);
+      font-size: .8rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── SCROLL PROGRESS ── */
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: var(--gold);
+      width: 0%;
+      z-index: 200;
+      transition: width .1s;
+    }
+
+    /* ── TABS within section ── */
+    .inner-tabs { display: flex; gap: .4rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .inner-tab {
+      font-family: 'Oswald', sans-serif;
+      font-size: .85rem;
+      padding: .3rem .8rem;
+      border: 2px solid var(--border);
+      border-radius: 4px;
+      cursor: pointer;
+      background: var(--parchment2);
+      color: var(--brown);
+      font-weight: 600;
+      transition: all .15s;
+    }
+    .inner-tab.active, .inner-tab:hover {
+      background: var(--brown);
+      color: var(--parchment);
+      border-color: var(--brown);
+    }
+    .inner-panel { display: none; }
+    .inner-panel.active { display: block; }
+  </style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<header class="hero">
+  <h1>Last War</h1>
+  <div class="subtitle">★ Season 5 ★</div>
+  <div class="badge">#1075 QueenRae Alliance Guide</div>
+</header>
+
+<nav id="main-nav">
+  <button class="active" data-target="overview">General Guide</button>
+  <button data-target="checklist">Checklist</button>
+  <button data-target="coffee">Coffee &amp; Caffeine</button>
+  <button data-target="banks">Bank Investment</button>
+  <button data-target="trains">Railroad Tycoon</button>
+</nav>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 1 — GENERAL GUIDE
+════════════════════════════════════════════ -->
+<section id="overview" class="section active">
+  <h2 class="section-title">General Guide</h2>
+
+  <div class="card dark">
+    <h3 class="card-title"><span class="icon">🔥</span> Main Priority — First Days</h3>
+    <p style="font-size:1.1rem; color:var(--gold-light); font-family:'Oswald',sans-serif; font-weight:700; text-align:center; padding:.5rem 0;">
+      COFFEE + CAFFEINE INSTITUTE
+    </p>
+    <p style="text-align:center; color:var(--parchment); font-size:.9rem;">Focus on Coffee until your resistance is built up.</p>
+  </div>
+
+  <div class="card">
+    <h3 class="card-title"><span class="icon">⚙️</span> Resources Overview</h3>
+    <div class="resource-row">
+      <div class="resource-pill"><span class="ricon">☕</span> Coffee Beans = Stone ($4) — for Coffee Factories</div>
+      <div class="resource-pill"><span class="ricon">🍵</span> Coffee = Quartz ($4) — for Caffeine Institute</div>
+      <div class="resource-pill"><span class="ricon">💎</span> CrystalGold — like magatama, buy season items</div>
+      <div class="resource-pill"><span class="ricon">🥃</span> Whiskey (NEW) — uncommon rss, used to buy CrystalGolds</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <h3 class="card-title"><span class="icon">🏭</span> Coffee Factory Unlocks</h3>
+      <ul class="guide-list">
+        <li><strong>1st Factory:</strong> Available from the start</li>
+        <li><strong>2nd Factory:</strong> Unlocks when 1st reaches level 10</li>
+        <li><strong>3rd &amp; 4th:</strong> Unlock at level 15 of the previous one</li>
+        <li><strong>5th Factory:</strong> Requires the Season Weekly Pass</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 class="card-title"><span class="icon">☕</span> Caffeine Institute</h3>
+      <ul class="guide-list">
+        <li>Upgrading increases your virus resistance</li>
+        <li>Prepares coffee cups — drink to gain various 8h buffs</li>
+        <li><strong>Tanker/Pilot/Missileer Bar:</strong> Requires Caffeine Institute level 60 — boosts damage for those hero types</li>
+        <li>Tactic Cards are back — refer to last season's guide for daily farming</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 class="card-title"><span class="icon">📈</span> Coffee Factory Upgrade Strategy</h3>
+    <div id="upgrade-steps">
+      <div class="upgrade-step"><div class="step-num">1</div><div class="step-text">Level up Coffee Factory I to <strong>level 10</strong></div></div>
+      <div class="upgrade-step"><div class="step-num">2</div><div class="step-text">Level up Coffee Factory II to <strong>level 5</strong></div></div>
+      <div class="upgrade-step"><div class="step-num">3</div><div class="step-text">Level up Coffee Factory I to <strong>level 15</strong></div></div>
+      <div class="upgrade-step"><div class="step-num">4</div><div class="step-text">Level up Coffee Factory II to <strong>level 15</strong></div></div>
+      <div class="upgrade-step"><div class="step-num">5</div><div class="step-text">Level up Coffee Factory III to <strong>level 15</strong></div></div>
+      <div class="upgrade-step"><div class="step-num">6</div><div class="step-text">Level up Coffee Factory IV to <strong>level 15</strong></div></div>
+      <div class="upgrade-step"><div class="step-num">→</div><div class="step-text">Then upgrade <strong>all together</strong>: all to 16 → all to 17 → continue progressively</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 class="card-title"><span class="icon">💰</span> Purchasing Priorities</h3>
+    <div class="priority-item">
+      <div class="priority-num">1</div>
+      <div><strong>Season Pass</strong> — most valuable for low spenders</div>
+    </div>
+    <div class="priority-item">
+      <div class="priority-num">2</div>
+      <div><strong>Weekly Pass</strong> — good for moderate spenders</div>
+    </div>
+    <div class="priority-item">
+      <div class="priority-num">3</div>
+      <div><strong>Coffee Beans Packs</strong> — speed up resistance growth, only recommended for heavy spenders / resistance leaders</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 2 — CHECKLIST
+════════════════════════════════════════════ -->
+<section id="checklist" class="section">
+  <h2 class="section-title">Checklist &amp; First Weeks</h2>
+
+  <div class="card">
+    <h3 class="card-title"><span class="icon">📋</span> Prep Checklist</h3>
+    <p style="font-size:.85rem; color:var(--brown); margin-bottom:.8rem;">Tick off items as you complete them — progress is saved in your browser.</p>
+    <div id="prep-checklist">
+      <div class="checklist-item" data-id="prep1">
+        <input type="checkbox" id="prep1"><label for="prep1">Save TPs — no more free TP between servers</label>
+      </div>
+      <div class="checklist-item" data-id="prep2">
+        <input type="checkbox" id="prep2"><label for="prep2">Fill drill grounds &amp; hospitals</label>
+      </div>
+      <div class="checklist-item" data-id="prep3">
+        <input type="checkbox" id="prep3"><label for="prep3">Bring Venom to at least 5 stars, level 160 on the wall, to have him UR 5 stars when promoting</label>
+      </div>
+      <div class="checklist-item" data-id="prep4">
+        <input type="checkbox" id="prep4"><label for="prep4">Turn off "shake to collect rss"</label>
+      </div>
+      <div class="checklist-item" data-id="prep5">
+        <input type="checkbox" id="prep5"><label for="prep5">Radar missions stacked on Sunday before the start</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 class="card-title"><span class="icon">🌟</span> When the Season Starts</h3>
+    <div id="start-checklist">
+      <div class="checklist-item" data-id="start1">
+        <input type="checkbox" id="start1"><label for="start1">Buy Season/Weekly Passes early (if spending)</label>
+      </div>
+      <div class="checklist-item" data-id="start2">
+        <input type="checkbox" id="start2"><label for="start2">Use all Heroes' Return Tickets</label>
+      </div>
+      <div class="checklist-item" data-id="start3">
+        <input type="checkbox" id="start3"><label for="start3">Redistribute Profession Skill Points</label>
+      </div>
+      <div class="checklist-item" data-id="start4">
+        <input type="checkbox" id="start4"><label for="start4">Wait for the new map to load before killing your first Doom Walker — highest level you can, minimum 250</label>
+      </div>
+      <div class="checklist-item" data-id="start5">
+        <input type="checkbox" id="start5"><label for="start5">Wait for the new map to load before doing radar tasks</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 class="card-title"><span class="icon">🏦</span> For the First Week</h3>
+    <div id="week1-checklist">
+      <div class="checklist-item" data-id="week1">
+        <input type="checkbox" id="week1"><label for="week1">Upgrade your coffee factories before collecting coffee</label>
+      </div>
+      <div class="checklist-item" data-id="week2">
+        <input type="checkbox" id="week2"><label for="week2">Look at the season pass goals and start working on them</label>
+      </div>
+      <div class="checklist-item" data-id="week3">
+        <input type="checkbox" id="week3"><label for="week3">Take part in every Bank Capture</label>
+      </div>
+      <div class="checklist-item" data-id="week4">
+        <input type="checkbox" id="week4"><label for="week4">Help resistance leaders — do not ask to be carried at the same level you are; they will carry you up to the level they can handle without losing troops</label>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top:1rem;">
+    <button onclick="resetChecklist()" style="background:var(--red);color:#fff;border:none;padding:.5rem 1.2rem;font-family:'Oswald',sans-serif;font-size:1rem;border-radius:4px;cursor:pointer;">
+      Reset All Checkboxes
+    </button>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 3 — COFFEE & CAFFEINE
+════════════════════════════════════════════ -->
+<section id="coffee" class="section">
+  <h2 class="section-title">The Caffeine Institute</h2>
+
+  <div class="grid-2">
+    <div class="card dark">
+      <h3 class="card-title"><span class="icon">⏱️</span> Production</h3>
+      <ul class="guide-list">
+        <li>One cup of coffee every <strong>12 hours</strong></li>
+        <li>Stack up to <strong>3 cups</strong> at the same time</li>
+        <li>Coffee cup buffs last <strong>8 hours</strong></li>
+        <li>Buff activates when you drink the cup</li>
+      </ul>
+    </div>
+    <div class="card dark">
+      <h3 class="card-title"><span class="icon">☕</span> Barista Skill</h3>
+      <ul class="guide-list">
+        <li>Unlocks at skill level 1 (Lv.0 → 1)</li>
+        <li>Reduces brewing time from 12h to <strong>8 hours</strong></li>
+        <li>With Barista skill: buff lasts 8h = you can <strong>always have a buff</strong> active</li>
+        <li>Buy available recipes — they are cheap and worth it</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 class="card-title"><span class="icon">📖</span> Coffee Recipes</h3>
+    <div class="recipe-grid">
+      <div class="recipe-card">
+        <div class="recipe-icon">☕</div>
+        <h4>Black Coffee</h4>
+        <div class="bonus"><span>+200 Resistance</span></div>
+        <div class="how">Available at start</div>
+      </div>
+      <div class="recipe-card">
+        <div class="recipe-icon">☕</div>
+        <h4>Espresso Coffee</h4>
+        <div class="bonus"><span>+200 Resistance</span><span>Construction Speed +5%</span></div>
+        <div class="how">Kill a level 20 Dancer Zombie</div>
+      </div>
+      <div class="recipe-card">
+        <div class="recipe-icon">☕</div>
+        <h4>Specialty Coffee</h4>
+        <div class="bonus"><span>+200 Resistance</span><span>Training Speed +2%</span></div>
+        <div class="how">Kill a level 40 Dancer Zombie</div>
+      </div>
+      <div class="recipe-card">
+        <div class="recipe-icon">🤠</div>
+        <h4>Cowboy Coffee</h4>
+        <div class="bonus"><span>+500 Resistance</span></div>
+        <div class="how">1,000 CrystalGolds in shop — Week 2</div>
+      </div>
+      <div class="recipe-card">
+        <div class="recipe-icon">🥛</div>
+        <h4>Latte Coffee</h4>
+        <div class="bonus"><span>+500 Resistance</span><span>Research Speed +5%</span></div>
+        <div class="how">3,000 CrystalGolds in shop — Week 3</div>
+      </div>
+      <div class="recipe-card">
+        <div class="recipe-icon">🍮</div>
+        <h4>Caramel Coffee</h4>
+        <div class="bonus"><span>+500 Resistance</span><span>Skill Damage +5%</span></div>
+        <div class="how">5,000 CrystalGolds in shop — Week 5</div>
+      </div>
+      <div class="recipe-card">
+        <div class="recipe-icon">🍫</div>
+        <h4>Mocha Coffee</h4>
+        <div class="bonus"><span>+500 Resistance</span><span>March Speed +5%</span></div>
+        <div class="how">5,000 CrystalGolds in shop — Week 6</div>
+      </div>
+      <div class="recipe-card">
+        <div class="recipe-icon">🍦</div>
+        <h4>Cream Coffee</h4>
+        <div class="bonus"><span>+500 Resistance</span><span>Food/Iron/Coin Output +5%</span></div>
+        <div class="how">Kill level 91+ Doom Elite (random drop, not guaranteed)</div>
+      </div>
+      <div class="recipe-card">
+        <div class="recipe-icon">🍄</div>
+        <h4>Truffle Coffee</h4>
+        <div class="bonus"><span>+500 Resistance</span><span>Damage vs. Monsters +5%</span></div>
+        <div class="how">Kill a Plague Rooster (random drop after Week 2)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 4 — BANK INVESTMENT
+════════════════════════════════════════════ -->
+<section id="banks" class="section">
+  <h2 class="section-title">Bank Investment / Finance Tycoon</h2>
+
+  <div class="card dark" style="text-align:center;">
+    <p style="font-family:'Oswald',sans-serif;font-size:1.1rem;color:var(--gold-light);">Banks are the new Strongholds.</p>
+  </div>
+
+  <div class="card">
+    <h3 class="card-title"><span class="icon">🏦</span> Deposits</h3>
+    <div class="grid-2">
+      <ul class="guide-list">
+        <li>Make <strong>3 CrystalGold deposits</strong> per day in Banks you hold</li>
+        <li>Up to <strong>15 active deposits</strong> at once</li>
+        <li>Deposits last up to <strong>3 days</strong> (5 days later in the season)</li>
+      </ul>
+      <ul class="guide-list">
+        <li>Longer deposit terms = higher interest rates but more risk exposure</li>
+        <li>If the bank is taken and plundered, <strong>you can lose part of your investment</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <h3 class="card-title"><span class="tag neutral">Neutral Banks</span></h3>
+      <ul class="guide-list">
+        <li>Fixed rate: <strong>1,000 CrystalGolds</strong> per attack on the SH / max 12k per SH</li>
+        <li>Send multiple squads to attack the SH to maximise your plundered amount</li>
+        <li>You plunder from <strong>NPCs</strong></li>
+        <li>When you rank at the top for the Code, you receive a 1-day buff that increases your plunder amount</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 class="card-title"><span class="tag owned">Pre-Owned Banks 🔒</span></h3>
+      <ul class="guide-list">
+        <li><strong>60-minute</strong> plunder window after capture</li>
+        <li>Get various amounts of CrystalGolds depending on deposits in the bank</li>
+        <li>You plunder from <strong>real players</strong></li>
+        <li>We may choose <em>not</em> to plunder after a capture, based on allies and partnerships</li>
+        <li>We will most likely ask players to <strong>never plunder a bank pre-owned by 1075 alliances</strong> — stay aware of upcoming instructions</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert-banner">
+    ⚠️ If we issue a no-plundering instruction, we strictly expect EVERYONE in the alliance to respect it
+  </div>
+
+  <div class="card success">
+    <h3 class="card-title" style="color:var(--gold-light)"><span class="icon">💡</span> Tips for Bank Deposits</h3>
+    <ul class="guide-list">
+      <li><strong>First 2 weeks</strong> will be relatively safe — use maximum-duration deposits (best time for long-term deposits)</li>
+      <li>Go back to <strong>3-day deposits</strong> for banks within reach of other warzones near the <strong>end of week 2</strong></li>
+      <li>After a Bank is captured there is a <strong>60-hour cooldown</strong> — 3-day deposits made right after will only be vulnerable for the <strong>last 12 hours</strong></li>
+      <li><strong>1-day deposits give the best return</strong> BUT they won't let you stack multiple investments (3-per-day limit) — not recommended unless there is a high chance of the bank being plundered</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 5 — RAILROAD TYCOON
+════════════════════════════════════════════ -->
+<section id="trains" class="section">
+  <h2 class="section-title">The Train / Railroad Tycoon</h2>
+
+  <div class="card dark">
+    <h3 class="card-title"><span class="icon">🚂</span> "The Fortune"</h3>
+    <p style="color:var(--parchment);">"The Fortune" is a new personal train used to sell your whiskey and earn CrystalGolds.</p>
+    <p style="color:var(--gold-light); margin-top:.4rem; font-size:.85rem;"><em>Not linked to the alliance train.</em></p>
+  </div>
+
+  <div class="inner-tabs">
+    <button class="inner-tab active" data-inner="selling">Selling Methods</button>
+    <button class="inner-tab" data-inner="schedule">Train Schedule</button>
+    <button class="inner-tab" data-inner="plunder-train">Plundering</button>
+  </div>
+
+  <div class="inner-panel active" id="inner-selling">
+    <div class="grid-2">
+      <div class="card">
+        <h3 class="card-title"><span class="tag neutral">Consign</span></h3>
+        <ul class="guide-list">
+          <li>Fixed prices</li>
+          <li>Each station buys <strong>10 whiskeys</strong> from you</li>
+          <li>Up to <strong>100 whiskeys/day</strong></li>
+          <li>Simple and predictable income</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 class="card-title"><span class="tag warn">Premium Sale</span> <span style="font-size:.75rem;">(Week 3+)</span></h3>
+        <ul class="guide-list">
+          <li>You set the price</li>
+          <li>Each station buys the cheapest whiskey first and has a maximum amount it can buy</li>
+          <li>Up to <strong>200 whiskeys/day</strong></li>
+          <li>Use the <strong>Trade Logs</strong> to identify each station's planned purchase quantities and use Premium Sale at stations with higher limits</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title"><span class="icon">📋</span> Trade Logs — Station Limits</h3>
+      <table class="trade-log">
+        <thead>
+          <tr><th>Station</th><th>Plan (Whiskeys)</th><th>Limit (Max)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>A</td><td>80</td><td>120</td></tr>
+          <tr><td>B</td><td>60</td><td>150</td></tr>
+          <tr><td>C</td><td>40</td><td>100</td></tr>
+          <tr><td>D</td><td>50</td><td>130</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card warning">
+      <h3 class="card-title" style="color:var(--gold-light)"><span class="icon">⚠️</span> 50% of What You Send Can Be Plundered!</h3>
+      <p style="margin-bottom:.6rem;">It's better to <strong>split your whiskey over 2 or more trains</strong> to make it less attractive for robbers.</p>
+      <p style="font-size:.85rem; color:var(--parchment);">❌ <strong>DON'T:</strong> Send all your whiskey on one train<br>
+      ✅ <strong>DO:</strong> Split it across 2–3 trains</p>
+    </div>
+  </div>
+
+  <div class="inner-panel" id="inner-schedule">
+    <div class="card dark">
+      <h3 class="card-title"><span class="icon">🕐</span> 6 Trains Per Day</h3>
+      <p style="color:var(--parchment); margin-bottom:1rem;">Every 4 hours starting at reset. Plan your whiskey distribution accordingly.</p>
+      <div class="train-row"><span class="train-icon">🚂</span><span class="train-time">Reset</span><span>Train 1 departs</span></div>
+      <div class="train-row"><span class="train-icon">🚂</span><span class="train-time">+4h</span><span>Train 2 departs</span></div>
+      <div class="train-row"><span class="train-icon">🚂</span><span class="train-time">+8h</span><span>Train 3 departs</span></div>
+      <div class="train-row"><span class="train-icon">🚂</span><span class="train-time">+12h</span><span>Train 4 departs</span></div>
+      <div class="train-row"><span class="train-icon">🚂</span><span class="train-time">+16h</span><span>Train 5 departs</span></div>
+      <div class="train-row"><span class="train-icon">🚂</span><span class="train-time">+20h</span><span>Train 6 departs</span></div>
+    </div>
+  </div>
+
+  <div class="inner-panel" id="inner-plunder-train">
+    <div class="card">
+      <h3 class="card-title"><span class="icon">⚔️</span> Train Plundering Rules</h3>
+      <ul class="guide-list">
+        <li><strong>3 plunder attempts</strong> per day</li>
+        <li><strong>3 refreshes</strong> per day; after that, it costs CrystalGolds to search for new targets</li>
+        <li>You steal <strong>10% of the goods</strong> per successful plunder</li>
+        <li>Unused plunder attempts accumulate across days, up to a maximum of <strong>7 attempts</strong></li>
+        <li>If you have used all free refreshes, it's better to <strong>wait until the next day</strong> rather than spending CrystalGolds on someone you can't beat</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Last War Season 5 — Alliance #1075 QueenRae Guide &nbsp;·&nbsp; All content sourced from official alliance infographics
+</footer>
+
+<script>
+  // ── NAV TABS ──
+  const navBtns = document.querySelectorAll('#main-nav button');
+  const sections = document.querySelectorAll('.section');
+  navBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      navBtns.forEach(b => b.classList.remove('active'));
+      sections.forEach(s => s.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.target).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  // ── INNER TABS ──
+  document.querySelectorAll('.inner-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const parent = tab.closest('.section');
+      parent.querySelectorAll('.inner-tab').forEach(t => t.classList.remove('active'));
+      parent.querySelectorAll('.inner-panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('inner-' + tab.dataset.inner).classList.add('active');
+    });
+  });
+
+  // ── CHECKLIST PERSISTENCE ──
+  function loadChecklist() {
+    document.querySelectorAll('.checklist-item input[type=checkbox]').forEach(cb => {
+      const saved = localStorage.getItem('lws5_' + cb.id);
+      if (saved === 'true') {
+        cb.checked = true;
+        cb.closest('.checklist-item').classList.add('checked');
+      }
+    });
+  }
+  function saveChecklist(id, checked) {
+    localStorage.setItem('lws5_' + id, checked);
+  }
+  function resetChecklist() {
+    document.querySelectorAll('.checklist-item input[type=checkbox]').forEach(cb => {
+      cb.checked = false;
+      cb.closest('.checklist-item').classList.remove('checked');
+      localStorage.removeItem('lws5_' + cb.id);
+    });
+  }
+  document.querySelectorAll('.checklist-item input[type=checkbox]').forEach(cb => {
+    cb.addEventListener('change', () => {
+      cb.closest('.checklist-item').classList.toggle('checked', cb.checked);
+      saveChecklist(cb.id, cb.checked);
+    });
+  });
+  loadChecklist();
+
+  // ── SCROLL PROGRESS ──
+  window.addEventListener('scroll', () => {
+    const el = document.documentElement;
+    const pct = (el.scrollTop / (el.scrollHeight - el.clientHeight)) * 100;
+    document.getElementById('progress-bar').style.width = pct + '%';
+  });
+</script>
+</body>
+</html>
