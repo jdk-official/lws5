@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 480" role="img" aria-label="Watchtower">
+  <defs>
+    <linearGradient id="t-wood" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#6e3812"/>
+      <stop offset="1" stop-color="#3a1c08"/>
+    </linearGradient>
+    <linearGradient id="t-wood2" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#8a4c18"/>
+      <stop offset="1" stop-color="#5a3010"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ground shadow -->
+  <ellipse cx="120" cy="465" rx="100" ry="8" fill="#000" opacity="0.5"/>
+
+  <!-- 4 LEGS / SUPPORT POSTS — perspective: outer legs go wider at bottom -->
+  <polygon points="60,150 78,150 50,460 26,460" fill="url(#t-wood)" stroke="#1c0e04" stroke-width="1.5"/>
+  <polygon points="162,150 180,150 214,460 190,460" fill="url(#t-wood)" stroke="#1c0e04" stroke-width="1.5"/>
+  <polygon points="92,150 100,150 84,460 70,460" fill="url(#t-wood2)" stroke="#1c0e04" stroke-width="1.2"/>
+  <polygon points="140,150 148,150 170,460 156,460" fill="url(#t-wood2)" stroke="#1c0e04" stroke-width="1.2"/>
+
+  <!-- Cross-bracing (X patterns) -->
+  <g stroke="#1c0e04" stroke-width="2.5" fill="none">
+    <line x1="50" y1="380" x2="190" y2="320"/>
+    <line x1="50" y1="320" x2="190" y2="380"/>
+    <line x1="60" y1="280" x2="180" y2="230"/>
+    <line x1="60" y1="230" x2="180" y2="280"/>
+  </g>
+  <g stroke="#5a3010" stroke-width="1.5" fill="none">
+    <line x1="50" y1="380" x2="190" y2="320"/>
+    <line x1="50" y1="320" x2="190" y2="380"/>
+    <line x1="60" y1="280" x2="180" y2="230"/>
+    <line x1="60" y1="230" x2="180" y2="280"/>
+  </g>
+
+  <!-- Horizontal cross beams -->
+  <rect x="40" y="220" width="160" height="6" fill="#3a1c08" stroke="#1c0e04" stroke-width="1"/>
+  <rect x="40" y="300" width="160" height="6" fill="#3a1c08" stroke="#1c0e04" stroke-width="1"/>
+  <rect x="40" y="380" width="160" height="6" fill="#3a1c08" stroke="#1c0e04" stroke-width="1"/>
+
+  <!-- LADDER (on right side) -->
+  <g stroke="#3a1c08" stroke-width="2">
+    <line x1="195" y1="155" x2="218" y2="450"/>
+    <line x1="205" y1="155" x2="228" y2="450"/>
+  </g>
+  <g stroke="#3a1c08" stroke-width="1.5">
+    <line x1="197" y1="180" x2="207" y2="180"/>
+    <line x1="198" y1="210" x2="209" y2="210"/>
+    <line x1="200" y1="240" x2="211" y2="240"/>
+    <line x1="201" y1="270" x2="213" y2="270"/>
+    <line x1="203" y1="300" x2="215" y2="300"/>
+    <line x1="205" y1="330" x2="217" y2="330"/>
+    <line x1="207" y1="360" x2="219" y2="360"/>
+    <line x1="209" y1="390" x2="221" y2="390"/>
+    <line x1="210" y1="420" x2="223" y2="420"/>
+  </g>
+
+  <!-- PLATFORM at top — base -->
+  <polygon points="48,148 192,148 200,160 40,160" fill="#3a1c08" stroke="#1c0e04" stroke-width="1.5"/>
+  <rect x="40" y="160" width="160" height="8" fill="#5a3010" stroke="#1c0e04" stroke-width="1"/>
+
+  <!-- PLATFORM RAILINGS -->
+  <rect x="40" y="115" width="6" height="35" fill="#3a1c08"/>
+  <rect x="194" y="115" width="6" height="35" fill="#3a1c08"/>
+  <line x1="40" y1="120" x2="200" y2="120" stroke="#3a1c08" stroke-width="3"/>
+  <line x1="40" y1="135" x2="200" y2="135" stroke="#3a1c08" stroke-width="2"/>
+  <!-- Railing posts -->
+  <g fill="#3a1c08">
+    <rect x="70" y="118" width="3" height="32"/>
+    <rect x="100" y="118" width="3" height="32"/>
+    <rect x="135" y="118" width="3" height="32"/>
+    <rect x="165" y="118" width="3" height="32"/>
+  </g>
+
+  <!-- ROOF — pitched -->
+  <polygon points="30,115 120,55 210,115 200,120 120,68 40,120" fill="#2a1408" stroke="#1c0e04" stroke-width="1.5"/>
+  <polygon points="40,120 120,68 200,120 200,128 40,128" fill="#5a3010"/>
+
+  <!-- Roof shingles / pattern -->
+  <g stroke="#1c0e04" stroke-width="0.6" opacity="0.6" fill="none">
+    <path d="M 35 90 L 205 90"/>
+    <path d="M 38 100 L 202 100"/>
+    <path d="M 41 110 L 199 110"/>
+  </g>
+
+  <!-- FLAG POLE -->
+  <line x1="120" y1="55" x2="120" y2="15" stroke="#1c0e04" stroke-width="2"/>
+  <circle cx="120" cy="14" r="3" fill="#d4900a" stroke="#1c0e04" stroke-width="0.8"/>
+
+  <!-- FLAG -->
+  <path d="M 120 18 L 158 22 L 155 38 L 120 38 Z" fill="#a82818" stroke="#5a1008" stroke-width="1"/>
+  <path d="M 120 18 L 158 22" stroke="#5a1008" stroke-width="0.5" opacity="0.5"/>
+  <!-- Flag star -->
+  <path d="M 137 28 l 1.5 3 l 3.3 0.4 l -2.4 2.1 l 0.6 3.3 l -3 -1.7 l -3 1.7 l 0.6 -3.3 l -2.4 -2.1 l 3.3 -0.4 z"
+        fill="#f0c030"/>
+
+  <!-- LANTERN under platform -->
+  <g transform="translate(120 175)">
+    <line x1="0" y1="0" x2="0" y2="8" stroke="#1c0e04" stroke-width="1"/>
+    <rect x="-6" y="8" width="12" height="16" fill="#d4900a" stroke="#1c0e04" stroke-width="1.2"/>
+    <circle cx="0" cy="16" r="3.5" fill="#f0c030" opacity="0.95"/>
+  </g>
+
+  <!-- Wood-grain hint via filter on platform -->
+  <g opacity="0.4" stroke="#1c0e04" stroke-width="0.5" fill="none">
+    <line x1="42" y1="163" x2="198" y2="163"/>
+    <line x1="42" y1="165" x2="198" y2="165"/>
+  </g>
+
+  <!-- GROUND -->
+  <rect x="10" y="455" width="220" height="20" fill="#2a1a08" opacity="0.7"/>
+</svg>

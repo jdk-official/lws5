@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 280" role="img" aria-label="The Fortune steam locomotive">
+  <defs>
+    <linearGradient id="boiler" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#3a1c08"/>
+      <stop offset="0.45" stop-color="#5a3010"/>
+      <stop offset="0.55" stop-color="#5a3010"/>
+      <stop offset="1" stop-color="#1c0e04"/>
+    </linearGradient>
+    <linearGradient id="brass" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#f0c030"/>
+      <stop offset="0.5" stop-color="#d4900a"/>
+      <stop offset="1" stop-color="#7a4818"/>
+    </linearGradient>
+    <linearGradient id="cab" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#7a1808"/>
+      <stop offset="1" stop-color="#3a0a04"/>
+    </linearGradient>
+    <radialGradient id="smoke" cx="0.4" cy="0.6" r="0.6">
+      <stop offset="0" stop-color="#d8d0c0"/>
+      <stop offset="1" stop-color="#5a5048" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wheel" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#5a3010"/>
+      <stop offset="1" stop-color="#2a1408"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ground shadow -->
+  <ellipse cx="280" cy="245" rx="240" ry="10" fill="#000" opacity="0.5"/>
+
+  <!-- SMOKE PLUMES -->
+  <g opacity="0.85">
+    <ellipse cx="180" cy="40" rx="28" ry="18" fill="url(#smoke)"/>
+    <ellipse cx="150" cy="20" rx="22" ry="14" fill="url(#smoke)"/>
+    <ellipse cx="210" cy="60" rx="32" ry="20" fill="url(#smoke)"/>
+    <ellipse cx="130" cy="50" rx="20" ry="14" fill="url(#smoke)"/>
+  </g>
+
+  <!-- COW CATCHER (front pilot) -->
+  <polygon points="20,220 50,180 70,200 70,230 20,230" fill="#3a1c08" stroke="#1c0e04" stroke-width="2"/>
+  <g stroke="#1c0e04" stroke-width="1" opacity="0.7">
+    <line x1="25" y1="220" x2="42" y2="195"/>
+    <line x1="32" y1="225" x2="48" y2="200"/>
+    <line x1="40" y1="228" x2="55" y2="205"/>
+  </g>
+
+  <!-- FRONT BUMPER / HEADLAMP -->
+  <rect x="65" y="195" width="20" height="35" fill="url(#brass)" stroke="#1c0e04" stroke-width="1.5"/>
+  <circle cx="75" cy="205" r="10" fill="#f0c030" stroke="#1c0e04" stroke-width="2"/>
+  <circle cx="75" cy="205" r="6" fill="#fff5d0"/>
+  <circle cx="73" cy="203" r="2" fill="#fff" opacity="0.8"/>
+
+  <!-- MAIN BOILER (large horizontal cylinder) -->
+  <rect x="85" y="120" width="280" height="110" rx="6" fill="url(#boiler)" stroke="#1c0e04" stroke-width="2.5"/>
+  <!-- Boiler highlight -->
+  <rect x="92" y="128" width="265" height="20" fill="#7a4818" opacity="0.4" rx="3"/>
+  <!-- Boiler bands -->
+  <g stroke="url(#brass)" stroke-width="3">
+    <line x1="120" y1="120" x2="120" y2="230"/>
+    <line x1="190" y1="120" x2="190" y2="230"/>
+    <line x1="260" y1="120" x2="260" y2="230"/>
+    <line x1="330" y1="120" x2="330" y2="230"/>
+  </g>
+
+  <!-- SMOKESTACK -->
+  <rect x="155" y="80" width="36" height="42" fill="url(#boiler)" stroke="#1c0e04" stroke-width="2"/>
+  <ellipse cx="173" cy="80" rx="22" ry="6" fill="url(#brass)" stroke="#1c0e04" stroke-width="2"/>
+  <ellipse cx="173" cy="78" rx="22" ry="5" fill="#1a0e04"/>
+
+  <!-- STEAM DOME (bell) -->
+  <path d="M 215 115 L 215 95 Q 215 80, 235 80 Q 255 80, 255 95 L 255 115 Z"
+        fill="url(#brass)" stroke="#1c0e04" stroke-width="2"/>
+  <ellipse cx="235" cy="80" rx="20" ry="4" fill="#7a4818"/>
+
+  <!-- WHISTLE -->
+  <rect x="278" y="98" width="8" height="22" fill="url(#brass)" stroke="#1c0e04" stroke-width="1.5"/>
+  <circle cx="282" cy="98" r="5" fill="url(#brass)" stroke="#1c0e04" stroke-width="1.5"/>
+
+  <!-- BOILER FRONT (smokebox door) -->
+  <circle cx="100" cy="175" r="42" fill="#1a0e04" stroke="#1c0e04" stroke-width="2"/>
+  <circle cx="100" cy="175" r="36" fill="none" stroke="url(#brass)" stroke-width="2"/>
+  <!-- bolts around -->
+  <g fill="url(#brass)">
+    <circle cx="100" cy="139" r="2"/>
+    <circle cx="125" cy="150" r="2"/>
+    <circle cx="135" cy="175" r="2"/>
+    <circle cx="125" cy="200" r="2"/>
+    <circle cx="100" cy="211" r="2"/>
+    <circle cx="75" cy="200" r="2"/>
+    <circle cx="65" cy="175" r="2"/>
+    <circle cx="75" cy="150" r="2"/>
+  </g>
+  <!-- Centre handle -->
+  <rect x="92" y="165" width="16" height="20" rx="2" fill="url(#brass)" stroke="#1c0e04" stroke-width="1"/>
+
+  <!-- CAB / ENGINEER COMPARTMENT -->
+  <rect x="370" y="80" width="140" height="150" fill="url(#cab)" stroke="#1c0e04" stroke-width="2.5"/>
+  <!-- Cab roof -->
+  <polygon points="365,80 515,80 510,72 370,72" fill="#3a0a04" stroke="#1c0e04" stroke-width="1.5"/>
+  <!-- Cab window -->
+  <rect x="385" y="100" width="50" height="42" fill="#f0c030" stroke="#1c0e04" stroke-width="2"/>
+  <line x1="385" y1="121" x2="435" y2="121" stroke="#1c0e04" stroke-width="0.8"/>
+  <line x1="410" y1="100" x2="410" y2="142" stroke="#1c0e04" stroke-width="0.8"/>
+  <!-- Cab side door -->
+  <rect x="455" y="115" width="42" height="115" fill="#3a0a04" stroke="#1c0e04" stroke-width="1.5"/>
+  <rect x="462" y="125" width="28" height="36" fill="#f0c030" stroke="#1c0e04" stroke-width="1.5"/>
+  <circle cx="488" cy="180" r="2" fill="url(#brass)"/>
+
+  <!-- "FORTUNE" PLAQUE on cab side -->
+  <rect x="380" y="165" width="70" height="22" fill="url(#brass)" stroke="#1c0e04" stroke-width="1.5"/>
+  <text x="415" y="181" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#1c0e04" letter-spacing="2">FORTUNE</text>
+
+  <!-- UNDERCARRIAGE -->
+  <rect x="20" y="230" width="495" height="14" fill="#1a0e04" stroke="#1c0e04" stroke-width="1.5"/>
+
+  <!-- LARGE DRIVE WHEELS -->
+  <g>
+    <circle cx="180" cy="245" r="32" fill="url(#wheel)" stroke="#1c0e04" stroke-width="2.5"/>
+    <circle cx="180" cy="245" r="22" fill="none" stroke="url(#brass)" stroke-width="2"/>
+    <circle cx="180" cy="245" r="6" fill="url(#brass)" stroke="#1c0e04" stroke-width="1.5"/>
+    <!-- spokes -->
+    <g stroke="#1c0e04" stroke-width="2">
+      <line x1="180" y1="220" x2="180" y2="270"/>
+      <line x1="155" y1="245" x2="205" y2="245"/>
+      <line x1="163" y1="227" x2="197" y2="263"/>
+      <line x1="163" y1="263" x2="197" y2="227"/>
+    </g>
+  </g>
+  <g>
+    <circle cx="280" cy="245" r="32" fill="url(#wheel)" stroke="#1c0e04" stroke-width="2.5"/>
+    <circle cx="280" cy="245" r="22" fill="none" stroke="url(#brass)" stroke-width="2"/>
+    <circle cx="280" cy="245" r="6" fill="url(#brass)" stroke="#1c0e04" stroke-width="1.5"/>
+    <g stroke="#1c0e04" stroke-width="2">
+      <line x1="280" y1="220" x2="280" y2="270"/>
+      <line x1="255" y1="245" x2="305" y2="245"/>
+      <line x1="263" y1="227" x2="297" y2="263"/>
+      <line x1="263" y1="263" x2="297" y2="227"/>
+    </g>
+  </g>
+  <g>
+    <circle cx="430" cy="245" r="32" fill="url(#wheel)" stroke="#1c0e04" stroke-width="2.5"/>
+    <circle cx="430" cy="245" r="22" fill="none" stroke="url(#brass)" stroke-width="2"/>
+    <circle cx="430" cy="245" r="6" fill="url(#brass)" stroke="#1c0e04" stroke-width="1.5"/>
+    <g stroke="#1c0e04" stroke-width="2">
+      <line x1="430" y1="220" x2="430" y2="270"/>
+      <line x1="405" y1="245" x2="455" y2="245"/>
+      <line x1="413" y1="227" x2="447" y2="263"/>
+      <line x1="413" y1="263" x2="447" y2="227"/>
+    </g>
+  </g>
+
+  <!-- SMALL FRONT WHEEL -->
+  <circle cx="100" cy="248" r="14" fill="url(#wheel)" stroke="#1c0e04" stroke-width="2"/>
+  <circle cx="100" cy="248" r="4" fill="url(#brass)"/>
+
+  <!-- COUPLING ROD (connects drive wheels) -->
+  <rect x="170" y="241" width="270" height="8" rx="2" fill="#3a1c08" stroke="#1c0e04" stroke-width="1.5"/>
+  <circle cx="180" cy="245" r="3" fill="url(#brass)"/>
+  <circle cx="280" cy="245" r="3" fill="url(#brass)"/>
+  <circle cx="430" cy="245" r="3" fill="url(#brass)"/>
+</svg>

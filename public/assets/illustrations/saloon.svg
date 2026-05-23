@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 480" role="img" aria-label="Western saloon">
+  <defs>
+    <linearGradient id="wood1" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#6e3812"/>
+      <stop offset="1" stop-color="#3a1c08"/>
+    </linearGradient>
+    <linearGradient id="wood2" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#8a4c18"/>
+      <stop offset="1" stop-color="#5a3010"/>
+    </linearGradient>
+    <linearGradient id="sign" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#a06830"/>
+      <stop offset="1" stop-color="#6b3810"/>
+    </linearGradient>
+    <linearGradient id="window" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#f0c030"/>
+      <stop offset="1" stop-color="#a07020"/>
+    </linearGradient>
+    <filter id="wgrain">
+      <feTurbulence baseFrequency="0.02 0.6" numOctaves="2" seed="3" result="g"/>
+      <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.18 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+  </defs>
+
+  <!-- Ground shadow -->
+  <ellipse cx="160" cy="465" rx="130" ry="10" fill="#000" opacity="0.5"/>
+
+  <!-- Building back wall -->
+  <rect x="40" y="80" width="240" height="380" fill="url(#wood1)"/>
+  <rect x="40" y="80" width="240" height="380" fill="url(#wood1)" filter="url(#wgrain)" opacity="0.6"/>
+
+  <!-- Vertical plank lines -->
+  <g stroke="#1c0e04" stroke-width="1" opacity="0.6">
+    <line x1="75" y1="80" x2="75" y2="460"/>
+    <line x1="110" y1="80" x2="110" y2="460"/>
+    <line x1="160" y1="80" x2="160" y2="460"/>
+    <line x1="210" y1="80" x2="210" y2="460"/>
+    <line x1="245" y1="80" x2="245" y2="460"/>
+  </g>
+
+  <!-- ROOF -->
+  <polygon points="20,90 160,30 300,90 280,100 160,46 40,100" fill="#3a1c08" stroke="#1c0e04" stroke-width="1.5"/>
+  <polygon points="40,100 160,46 280,100 280,108 40,108" fill="#5a3010"/>
+
+  <!-- FALSE FRONT TOP (typical western) -->
+  <rect x="55" y="100" width="210" height="50" fill="url(#wood2)" stroke="#1c0e04" stroke-width="1.5"/>
+  <rect x="65" y="110" width="190" height="30" fill="none" stroke="#3a1c08" stroke-width="1"/>
+
+  <!-- SIGN ON FALSE FRONT -->
+  <rect x="80" y="115" width="160" height="22" fill="url(#sign)" stroke="#1c0e04" stroke-width="1.5"/>
+  <text x="160" y="132" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#ecdea8" letter-spacing="3">SALOON</text>
+
+  <!-- AWNING / PORCH ROOF -->
+  <polygon points="20,180 300,180 280,210 40,210" fill="#2a1408" stroke="#1c0e04" stroke-width="1.5"/>
+  <!-- awning supports -->
+  <rect x="45" y="210" width="6" height="60" fill="#3a1c08"/>
+  <rect x="269" y="210" width="6" height="60" fill="#3a1c08"/>
+  <rect x="155" y="210" width="6" height="60" fill="#3a1c08"/>
+
+  <!-- UPPER WINDOWS (above awning) -->
+  <g>
+    <rect x="80" y="155" width="40" height="22" fill="url(#window)" stroke="#1c0e04" stroke-width="1.5"/>
+    <line x1="100" y1="155" x2="100" y2="177" stroke="#1c0e04" stroke-width="0.8"/>
+    <line x1="80" y1="166" x2="120" y2="166" stroke="#1c0e04" stroke-width="0.8"/>
+  </g>
+  <g>
+    <rect x="200" y="155" width="40" height="22" fill="url(#window)" stroke="#1c0e04" stroke-width="1.5"/>
+    <line x1="220" y1="155" x2="220" y2="177" stroke="#1c0e04" stroke-width="0.8"/>
+    <line x1="200" y1="166" x2="240" y2="166" stroke="#1c0e04" stroke-width="0.8"/>
+  </g>
+
+  <!-- MAIN STOREFRONT WINDOWS (large) -->
+  <g>
+    <rect x="65" y="225" width="55" height="80" fill="url(#window)" stroke="#1c0e04" stroke-width="1.5"/>
+    <line x1="93" y1="225" x2="93" y2="305" stroke="#1c0e04" stroke-width="0.8"/>
+    <line x1="65" y1="265" x2="120" y2="265" stroke="#1c0e04" stroke-width="0.8"/>
+  </g>
+  <g>
+    <rect x="200" y="225" width="55" height="80" fill="url(#window)" stroke="#1c0e04" stroke-width="1.5"/>
+    <line x1="227" y1="225" x2="227" y2="305" stroke="#1c0e04" stroke-width="0.8"/>
+    <line x1="200" y1="265" x2="255" y2="265" stroke="#1c0e04" stroke-width="0.8"/>
+  </g>
+
+  <!-- DOORWAY -->
+  <rect x="135" y="225" width="50" height="120" fill="#1a0e04" stroke="#1c0e04" stroke-width="1.5"/>
+  <!-- Swinging doors -->
+  <rect x="138" y="260" width="22" height="55" fill="url(#wood2)" stroke="#3a1c08" stroke-width="1"/>
+  <rect x="160" y="260" width="22" height="55" fill="url(#wood2)" stroke="#3a1c08" stroke-width="1"/>
+  <line x1="149" y1="262" x2="149" y2="313" stroke="#1c0e04" stroke-width="0.6"/>
+  <line x1="171" y1="262" x2="171" y2="313" stroke="#1c0e04" stroke-width="0.6"/>
+
+  <!-- HANGING SIGN -->
+  <g>
+    <line x1="160" y1="180" x2="160" y2="195" stroke="#1c0e04" stroke-width="2"/>
+    <rect x="135" y="195" width="50" height="22" fill="url(#sign)" stroke="#1c0e04" stroke-width="1.5"/>
+    <text x="160" y="211" text-anchor="middle" font-family="Georgia, serif" font-size="9" font-weight="bold" fill="#ecdea8" letter-spacing="1">WHISKEY</text>
+  </g>
+
+  <!-- LANTERN -->
+  <g transform="translate(60 215)">
+    <line x1="0" y1="0" x2="0" y2="6" stroke="#1c0e04" stroke-width="1"/>
+    <rect x="-5" y="6" width="10" height="14" fill="#d4900a" stroke="#1c0e04" stroke-width="1"/>
+    <circle cx="0" cy="13" r="3" fill="#f0c030" opacity="0.9"/>
+  </g>
+  <g transform="translate(260 215)">
+    <line x1="0" y1="0" x2="0" y2="6" stroke="#1c0e04" stroke-width="1"/>
+    <rect x="-5" y="6" width="10" height="14" fill="#d4900a" stroke="#1c0e04" stroke-width="1"/>
+    <circle cx="0" cy="13" r="3" fill="#f0c030" opacity="0.9"/>
+  </g>
+
+  <!-- PORCH FLOOR -->
+  <rect x="35" y="345" width="250" height="12" fill="#3a1c08" stroke="#1c0e04" stroke-width="1.5"/>
+
+  <!-- STEPS -->
+  <rect x="120" y="357" width="80" height="6" fill="#5a3010" stroke="#1c0e04" stroke-width="1"/>
+  <rect x="125" y="363" width="70" height="6" fill="#3a1c08" stroke="#1c0e04" stroke-width="1"/>
+
+  <!-- BARREL ON PORCH -->
+  <g transform="translate(50 305)">
+    <ellipse cx="0" cy="0" rx="18" ry="6" fill="#6b3810" stroke="#1c0e04" stroke-width="1"/>
+    <path d="M -18 0 L -18 38 Q 0 44, 18 38 L 18 0 Z" fill="url(#wood2)" stroke="#1c0e04" stroke-width="1.2"/>
+    <ellipse cx="0" cy="38" rx="18" ry="5" fill="#3a1c08"/>
+    <line x1="-18" y1="14" x2="18" y2="14" stroke="#1c0e04" stroke-width="0.8" opacity="0.6"/>
+    <line x1="-18" y1="26" x2="18" y2="26" stroke="#1c0e04" stroke-width="0.8" opacity="0.6"/>
+    <line x1="-9" y1="0" x2="-9" y2="40" stroke="#1c0e04" stroke-width="0.5" opacity="0.4"/>
+    <line x1="9" y1="0" x2="9" y2="40" stroke="#1c0e04" stroke-width="0.5" opacity="0.4"/>
+  </g>
+
+  <!-- GROUND -->
+  <rect x="20" y="430" width="280" height="35" fill="#2a1a08" opacity="0.7"/>
+</svg>
