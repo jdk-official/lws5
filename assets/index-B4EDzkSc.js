@@ -1,4 +1,4 @@
-(function(){const n=document.createElement("link").relList;if(n&&n.supports&&n.supports("modulepreload"))return;for(const s of document.querySelectorAll('link[rel="modulepreload"]'))e(s);new MutationObserver(s=>{for(const t of s)if(t.type==="childList")for(const r of t.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&e(r)}).observe(document,{childList:!0,subtree:!0});function a(s){const t={};return s.integrity&&(t.integrity=s.integrity),s.referrerPolicy&&(t.referrerPolicy=s.referrerPolicy),s.crossOrigin==="use-credentials"?t.credentials="include":s.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function e(s){if(s.ep)return;s.ep=!0;const t=a(s);fetch(s.href,t)}})();const b=`<section id="overview" class="section">
+(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const s of document.querySelectorAll('link[rel="modulepreload"]'))e(s);new MutationObserver(s=>{for(const n of s)if(n.type==="childList")for(const r of n.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&e(r)}).observe(document,{childList:!0,subtree:!0});function a(s){const n={};return s.integrity&&(n.integrity=s.integrity),s.referrerPolicy&&(n.referrerPolicy=s.referrerPolicy),s.crossOrigin==="use-credentials"?n.credentials="include":s.crossOrigin==="anonymous"?n.credentials="omit":n.credentials="same-origin",n}function e(s){if(s.ep)return;s.ep=!0;const n=a(s);fetch(s.href,n)}})();const b=`<section id="overview" class="section">
   <h2 class="ribbon-title">General Guide</h2>
 
   <div class="card-dark callout-banner reveal">
@@ -196,7 +196,7 @@
   <h2 class="ribbon-title">The Caffeine Institute</h2>
 
   <div class="card-dark reveal flex items-center gap-4 flex-wrap">
-    <img src="/assets/illustrations/coffee-mug.svg" alt="" class="w-24 md:w-32 flex-shrink-0 drop-shadow-[0_0_16px_rgba(212,144,10,0.5)]" />
+    <img src="/assets/illustrations/coffee-mug.png" alt="" class="w-24 md:w-32 flex-shrink-0 drop-shadow-[0_0_16px_rgba(212,144,10,0.5)]" />
     <div class="flex-1 min-w-[200px]">
       <h3 class="card-title">☕ Production &amp; Cups</h3>
       <ul class="guide-list">
@@ -208,7 +208,7 @@
   </div>
 
   <div class="card-dark reveal flex items-center gap-4 flex-wrap">
-    <img src="/assets/illustrations/barista.svg" alt="" class="w-24 md:w-32 flex-shrink-0 drop-shadow-[0_0_16px_rgba(212,144,10,0.5)]" />
+    <img src="/assets/illustrations/barista.png" alt="" class="w-24 md:w-32 flex-shrink-0 drop-shadow-[0_0_16px_rgba(212,144,10,0.5)]" />
     <div class="flex-1 min-w-[200px]">
       <h3 class="card-title">🧑‍🍳 Barista Skill</h3>
       <ul class="guide-list">
@@ -224,55 +224,55 @@
     <h3 class="card-title">📖 Coffee Recipes</h3>
     <div class="recipe-grid">
       <div class="recipe-card">
-        <img src="/assets/illustrations/coffee-cups/black.svg" alt="" />
+        <img src="/assets/illustrations/coffee-cups/black.png" alt="" />
         <h4>Black Coffee</h4>
         <div class="recipe-bonus"><span>+200 Resistance</span></div>
         <div class="recipe-how">Available at start</div>
       </div>
       <div class="recipe-card">
-        <img src="/assets/illustrations/coffee-cups/espresso.svg" alt="" />
+        <img src="/assets/illustrations/coffee-cups/espresso.png" alt="" />
         <h4>Espresso</h4>
         <div class="recipe-bonus"><span>+200 Resistance</span><span>Construction +5%</span></div>
         <div class="recipe-how">Kill a Lv.20 Dancer Zombie</div>
       </div>
       <div class="recipe-card">
-        <img src="/assets/illustrations/coffee-cups/specialty.svg" alt="" />
+        <img src="/assets/illustrations/coffee-cups/specialty.png" alt="" />
         <h4>Specialty</h4>
         <div class="recipe-bonus"><span>+200 Resistance</span><span>Training +2%</span></div>
         <div class="recipe-how">Kill a Lv.40 Dancer Zombie</div>
       </div>
       <div class="recipe-card">
-        <img src="/assets/illustrations/coffee-cups/cowboy.svg" alt="" />
+        <img src="/assets/illustrations/coffee-cups/cowboy.png" alt="" />
         <h4>Cowboy</h4>
         <div class="recipe-bonus"><span>+500 Resistance</span></div>
         <div class="recipe-how">1,000 CG in shop — Week 2</div>
       </div>
       <div class="recipe-card">
-        <img src="/assets/illustrations/coffee-cups/latte.svg" alt="" />
+        <img src="/assets/illustrations/coffee-cups/latte.png" alt="" />
         <h4>Latte</h4>
         <div class="recipe-bonus"><span>+500 Resistance</span><span>Research +5%</span></div>
         <div class="recipe-how">3,000 CG in shop — Week 3</div>
       </div>
       <div class="recipe-card">
-        <img src="/assets/illustrations/coffee-cups/caramel.svg" alt="" />
+        <img src="/assets/illustrations/coffee-cups/caramel.png" alt="" />
         <h4>Caramel</h4>
         <div class="recipe-bonus"><span>+500 Resistance</span><span>Skill Damage +5%</span></div>
         <div class="recipe-how">5,000 CG in shop — Week 5</div>
       </div>
       <div class="recipe-card">
-        <img src="/assets/illustrations/coffee-cups/mocha.svg" alt="" />
+        <img src="/assets/illustrations/coffee-cups/mocha.png" alt="" />
         <h4>Mocha</h4>
         <div class="recipe-bonus"><span>+500 Resistance</span><span>March Speed +5%</span></div>
         <div class="recipe-how">5,000 CG in shop — Week 6</div>
       </div>
       <div class="recipe-card">
-        <img src="/assets/illustrations/coffee-cups/cream.svg" alt="" />
+        <img src="/assets/illustrations/coffee-cups/cream.png" alt="" />
         <h4>Cream</h4>
         <div class="recipe-bonus"><span>+500 Resistance</span><span>Output +5%</span></div>
         <div class="recipe-how">Lv.91+ Doom Elite drop</div>
       </div>
       <div class="recipe-card">
-        <img src="/assets/illustrations/coffee-cups/truffle.svg" alt="" />
+        <img src="/assets/illustrations/coffee-cups/truffle.png" alt="" />
         <h4>Truffle</h4>
         <div class="recipe-bonus"><span>+500 Resistance</span><span>vs. Monsters +5%</span></div>
         <div class="recipe-how">Plague Rooster drop (Week 2+)</div>
@@ -284,7 +284,7 @@
   <h2 class="ribbon-title">Bank Investment / Finance Tycoon</h2>
 
   <div class="card-dark reveal flex items-center gap-4 flex-wrap">
-    <img src="/assets/illustrations/bank.svg" alt="" class="w-32 md:w-44 flex-shrink-0 drop-shadow-[0_0_16px_rgba(212,144,10,0.5)]" />
+    <img src="/assets/illustrations/bank.png" alt="" class="w-32 md:w-44 flex-shrink-0 drop-shadow-[0_0_16px_rgba(212,144,10,0.5)]" />
     <div class="flex-1 min-w-[200px] text-center md:text-left">
       <p class="font-display text-gold-light text-2xl md:text-3xl tracking-wider" style="text-shadow:2px 2px 0 #000;">Banks are the new Strongholds</p>
       <p class="text-parchment opacity-80 mt-2 text-sm">Capture, defend, deposit, plunder.</p>
@@ -346,7 +346,7 @@
   <h2 class="ribbon-title">The Train / Railroad Tycoon</h2>
 
   <div class="card-dark reveal flex items-center gap-4 flex-wrap">
-    <img src="/assets/illustrations/train-fortune.svg" alt="" class="w-40 md:w-56 flex-shrink-0 drop-shadow-[0_0_16px_rgba(212,144,10,0.5)]" />
+    <img src="/assets/illustrations/train-fortune.png" alt="" class="w-40 md:w-56 flex-shrink-0 drop-shadow-[0_0_16px_rgba(212,144,10,0.5)]" />
     <div class="flex-1 min-w-[220px]">
       <h3 class="card-title">🚂 "The Fortune"</h3>
       <p class="text-parchment">A new personal train used to sell your whiskey and earn CrystalGolds.</p>
@@ -415,37 +415,37 @@
       <p class="text-parchment text-sm mb-3">Every 4 hours starting at reset. Plan your whiskey distribution accordingly.</p>
       <div class="train-timeline">
         <div class="train-stop">
-          <img src="/assets/illustrations/train-fortune.svg" alt="" />
+          <img src="/assets/illustrations/train-fortune.png" alt="" />
           <div class="ts-label">Reset</div>
           <div class="ts-num">Train 1</div>
         </div>
         <div class="train-connector">+4h →</div>
         <div class="train-stop">
-          <img src="/assets/illustrations/train-fortune.svg" alt="" />
+          <img src="/assets/illustrations/train-fortune.png" alt="" />
           <div class="ts-label">+4h</div>
           <div class="ts-num">Train 2</div>
         </div>
         <div class="train-connector">+4h →</div>
         <div class="train-stop">
-          <img src="/assets/illustrations/train-fortune.svg" alt="" />
+          <img src="/assets/illustrations/train-fortune.png" alt="" />
           <div class="ts-label">+8h</div>
           <div class="ts-num">Train 3</div>
         </div>
         <div class="train-connector">+4h →</div>
         <div class="train-stop">
-          <img src="/assets/illustrations/train-fortune.svg" alt="" />
+          <img src="/assets/illustrations/train-fortune.png" alt="" />
           <div class="ts-label">+12h</div>
           <div class="ts-num">Train 4</div>
         </div>
         <div class="train-connector">+4h →</div>
         <div class="train-stop">
-          <img src="/assets/illustrations/train-fortune.svg" alt="" />
+          <img src="/assets/illustrations/train-fortune.png" alt="" />
           <div class="ts-label">+16h</div>
           <div class="ts-num">Train 5</div>
         </div>
         <div class="train-connector">+4h →</div>
         <div class="train-stop">
-          <img src="/assets/illustrations/train-fortune.svg" alt="" />
+          <img src="/assets/illustrations/train-fortune.png" alt="" />
           <div class="ts-label">+20h</div>
           <div class="ts-num">Train 6</div>
         </div>
@@ -466,5 +466,5 @@
     </div>
   </div>
 </section>
-`,C="/lws5/";function d(i){return i.replace(/(["'(])\/assets\//g,`$1${C}assets/`)}const g={overview:d(b),checklist:d(y),coffee:d(k),banks:d(w),trains:d(x)};function S(i){const n=document.getElementById("app"),a=document.querySelectorAll("#main-nav button");function e(t){const r=g[t]??g.overview;n.innerHTML=r,a.forEach(l=>{const c=l.dataset.target===t;l.classList.toggle("active",c),l.setAttribute("aria-selected",String(c))}),i(t,n)}function s(t){const r=document;r.startViewTransition?r.startViewTransition(()=>e(t)):e(t),window.scrollTo({top:0,behavior:"smooth"})}a.forEach(t=>{t.addEventListener("click",()=>{const r=t.dataset.target;r&&s(r)})}),e("overview")}const u="lws5_";function E(i){const n=i.querySelectorAll(".checklist-row");n.forEach(e=>{const s=e.dataset.id;if(!s)return;const t=e.querySelector("input[type=checkbox]");if(!t)return;localStorage.getItem(u+s)==="true"&&(t.checked=!0,e.classList.add("checked"));const l=()=>{t.checked=!t.checked,f(s,t.checked,e)};e.addEventListener("click",c=>{c.target===t||c.target.tagName==="LABEL"||l()}),t.addEventListener("change",()=>f(s,t.checked,e))});const a=i.querySelector("#reset-checklist");a&&a.addEventListener("click",()=>{n.forEach(e=>{const s=e.dataset.id,t=e.querySelector("input[type=checkbox]");!t||!s||(t.checked=!1,e.classList.remove("checked"),localStorage.removeItem(u+s))})})}function f(i,n,a){a.classList.toggle("checked",n),localStorage.setItem(u+i,String(n))}function T(i){const n=i.querySelectorAll(".inner-tab");n.length!==0&&n.forEach(a=>{a.addEventListener("click",()=>{const e=a.dataset.inner;e&&(n.forEach(s=>s.classList.toggle("active",s===a)),i.querySelectorAll("[data-inner-panel]").forEach(s=>{const t=s.dataset.innerPanel===e;s.hidden=!t}))})})}function L(){if(window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;const i=Array.from(document.querySelectorAll(".parallax"));if(i.length===0)return;let n=!1;function a(){const s=window.scrollY;for(const t of i){const r=parseFloat(t.dataset.speed??"0.5"),l=s*(1-r);t.style.transform=`translate3d(0, ${l.toFixed(1)}px, 0)`}n=!1}function e(){n||(n=!0,requestAnimationFrame(a))}window.addEventListener("scroll",e,{passive:!0}),a()}function P(){const i=document.getElementById("progress-bar");if(!i)return;let n=!1;function a(){const e=document.documentElement,s=e.scrollHeight-e.clientHeight,t=s>0?e.scrollTop/s*100:0;i.style.width=t+"%",n=!1}window.addEventListener("scroll",()=>{n||(n=!0,requestAnimationFrame(a))},{passive:!0})}function I(i,n,a){var e;if(i instanceof Element)return[i];if(typeof i=="string"){let s=document;const t=(e=void 0)!==null&&e!==void 0?e:s.querySelectorAll(i);return t?Array.from(t):[]}return Array.from(i)}const B={some:0,all:1};function m(i,n,{root:a,margin:e,amount:s="some"}={}){const t=I(i),r=new WeakMap,l=v=>{v.forEach(o=>{const p=r.get(o.target);if(o.isIntersecting!==!!p)if(o.isIntersecting){const h=n(o);typeof h=="function"?r.set(o.target,h):c.unobserve(o.target)}else typeof p=="function"&&(p(o),r.delete(o.target))})},c=new IntersectionObserver(l,{root:a,rootMargin:e,threshold:typeof s=="number"?s:B[s]});return t.forEach(v=>c.observe(v)),()=>c.disconnect()}function F(i){if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){i.querySelectorAll(".reveal").forEach(e=>e.classList.add("in-view"));return}i.querySelectorAll(".reveal").forEach((e,s)=>{e.style.transitionDelay=`${Math.min(s*.05,.3)}s`,m(e,()=>{e.classList.add("in-view")},{amount:.15})}),i.querySelectorAll(".recipe-card").forEach((e,s)=>{e.style.opacity="0",e.style.transform="translateY(16px)",e.style.transition=`opacity .45s cubic-bezier(.2,.7,.2,1) ${s*.04}s, transform .45s cubic-bezier(.2,.7,.2,1) ${s*.04}s`,m(e,()=>{e.style.opacity="1",e.style.transform="translateY(0)"},{amount:.2})})}P();L();S((i,n)=>{E(n),T(n),F(n)});
-//# sourceMappingURL=index-CUMakwD6.js.map
+`,C="/lws5/";function d(i){return i.replace(/(["'(])\/assets\//g,`$1${C}assets/`)}const g={overview:d(b),checklist:d(y),coffee:d(k),banks:d(w),trains:d(x)};function S(i){const t=document.getElementById("app"),a=document.querySelectorAll("#main-nav button");function e(n){const r=g[n]??g.overview;t.innerHTML=r,a.forEach(l=>{const c=l.dataset.target===n;l.classList.toggle("active",c),l.setAttribute("aria-selected",String(c))}),i(n,t)}function s(n){const r=document;r.startViewTransition?r.startViewTransition(()=>e(n)):e(n),window.scrollTo({top:0,behavior:"smooth"})}a.forEach(n=>{n.addEventListener("click",()=>{const r=n.dataset.target;r&&s(r)})}),e("overview")}const u="lws5_";function E(i){const t=i.querySelectorAll(".checklist-row");t.forEach(e=>{const s=e.dataset.id;if(!s)return;const n=e.querySelector("input[type=checkbox]");if(!n)return;localStorage.getItem(u+s)==="true"&&(n.checked=!0,e.classList.add("checked"));const l=()=>{n.checked=!n.checked,f(s,n.checked,e)};e.addEventListener("click",c=>{c.target===n||c.target.tagName==="LABEL"||l()}),n.addEventListener("change",()=>f(s,n.checked,e))});const a=i.querySelector("#reset-checklist");a&&a.addEventListener("click",()=>{t.forEach(e=>{const s=e.dataset.id,n=e.querySelector("input[type=checkbox]");!n||!s||(n.checked=!1,e.classList.remove("checked"),localStorage.removeItem(u+s))})})}function f(i,t,a){a.classList.toggle("checked",t),localStorage.setItem(u+i,String(t))}function T(i){const t=i.querySelectorAll(".inner-tab");t.length!==0&&t.forEach(a=>{a.addEventListener("click",()=>{const e=a.dataset.inner;e&&(t.forEach(s=>s.classList.toggle("active",s===a)),i.querySelectorAll("[data-inner-panel]").forEach(s=>{const n=s.dataset.innerPanel===e;s.hidden=!n}))})})}function L(){if(window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;const i=Array.from(document.querySelectorAll(".parallax"));if(i.length===0)return;let t=!1;function a(){const s=window.scrollY;for(const n of i){const r=parseFloat(n.dataset.speed??"0.5"),l=s*(1-r);n.style.transform=`translate3d(0, ${l.toFixed(1)}px, 0)`}t=!1}function e(){t||(t=!0,requestAnimationFrame(a))}window.addEventListener("scroll",e,{passive:!0}),a()}function P(){const i=document.getElementById("progress-bar");if(!i)return;let t=!1;function a(){const e=document.documentElement,s=e.scrollHeight-e.clientHeight,n=s>0?e.scrollTop/s*100:0;i.style.width=n+"%",t=!1}window.addEventListener("scroll",()=>{t||(t=!0,requestAnimationFrame(a))},{passive:!0})}function I(i,t,a){var e;if(i instanceof Element)return[i];if(typeof i=="string"){let s=document;const n=(e=void 0)!==null&&e!==void 0?e:s.querySelectorAll(i);return n?Array.from(n):[]}return Array.from(i)}const B={some:0,all:1};function m(i,t,{root:a,margin:e,amount:s="some"}={}){const n=I(i),r=new WeakMap,l=p=>{p.forEach(o=>{const v=r.get(o.target);if(o.isIntersecting!==!!v)if(o.isIntersecting){const h=t(o);typeof h=="function"?r.set(o.target,h):c.unobserve(o.target)}else typeof v=="function"&&(v(o),r.delete(o.target))})},c=new IntersectionObserver(l,{root:a,rootMargin:e,threshold:typeof s=="number"?s:B[s]});return n.forEach(p=>c.observe(p)),()=>c.disconnect()}function F(i){if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){i.querySelectorAll(".reveal").forEach(e=>e.classList.add("in-view"));return}i.querySelectorAll(".reveal").forEach((e,s)=>{e.style.transitionDelay=`${Math.min(s*.05,.3)}s`,m(e,()=>{e.classList.add("in-view")},{amount:.15})}),i.querySelectorAll(".recipe-card").forEach((e,s)=>{e.style.opacity="0",e.style.transform="translateY(16px)",e.style.transition=`opacity .45s cubic-bezier(.2,.7,.2,1) ${s*.04}s, transform .45s cubic-bezier(.2,.7,.2,1) ${s*.04}s`,m(e,()=>{e.style.opacity="1",e.style.transform="translateY(0)"},{amount:.2})})}P();L();S((i,t)=>{E(t),T(t),F(t)});
+//# sourceMappingURL=index-B4EDzkSc.js.map
