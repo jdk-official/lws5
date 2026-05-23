@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <defs>
+    <style>
+      .ic { stroke: #d4900a; stroke-width: 2.2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .ic-fill { fill: #d4900a; }
+      .ic-dim { stroke: #a87020; stroke-width: 1.5; fill: none; }
+    </style>
+  </defs>
+
+  <!-- ====== CHECKLIST: PREP ====== -->
+  <symbol id="i-tp" viewBox="0 0 24 24">
+    <circle class="ic" cx="12" cy="12" r="8"/>
+    <path class="ic" d="M12 4 L12 8 M12 16 L12 20 M4 12 L8 12 M16 12 L20 12"/>
+    <circle class="ic-fill" cx="12" cy="12" r="2"/>
+  </symbol>
+
+  <symbol id="i-hospital" viewBox="0 0 24 24">
+    <rect class="ic" x="4" y="6" width="16" height="14" rx="1"/>
+    <path class="ic" d="M12 9 L12 17 M8 13 L16 13"/>
+    <path class="ic" d="M4 6 L6 4 L18 4 L20 6"/>
+  </symbol>
+
+  <symbol id="i-star" viewBox="0 0 24 24">
+    <path class="ic-fill" d="M12 3 L14.5 9 L21 9.5 L16 14 L17.5 20.5 L12 17 L6.5 20.5 L8 14 L3 9.5 L9.5 9 Z"/>
+  </symbol>
+
+  <symbol id="i-phone-off" viewBox="0 0 24 24">
+    <rect class="ic" x="7" y="3" width="10" height="18" rx="2"/>
+    <circle class="ic-fill" cx="12" cy="18" r="0.8"/>
+    <path class="ic" d="M4 4 L20 20" stroke="#a82818" stroke-width="2.5"/>
+  </symbol>
+
+  <symbol id="i-radar" viewBox="0 0 24 24">
+    <circle class="ic" cx="12" cy="12" r="9"/>
+    <circle class="ic-dim" cx="12" cy="12" r="6"/>
+    <circle class="ic-dim" cx="12" cy="12" r="3"/>
+    <path class="ic" d="M12 12 L19 6"/>
+    <circle class="ic-fill" cx="12" cy="12" r="1.2"/>
+  </symbol>
+
+  <!-- ====== CHECKLIST: START ====== -->
+  <symbol id="i-pass" viewBox="0 0 24 24">
+    <rect class="ic" x="3" y="6" width="18" height="13" rx="2"/>
+    <path class="ic-fill" d="M3 9 L21 9 L21 11 L3 11 Z"/>
+    <path class="ic" d="M6 15 L12 15 M14 15 L18 15"/>
+  </symbol>
+
+  <symbol id="i-ticket" viewBox="0 0 24 24">
+    <path class="ic" d="M3 8 Q3 6, 5 6 L19 6 Q21 6, 21 8 L21 10 Q19 10, 19 12 Q19 14, 21 14 L21 16 Q21 18, 19 18 L5 18 Q3 18, 3 16 L3 14 Q5 14, 5 12 Q5 10, 3 10 Z"/>
+    <path class="ic-dim" d="M9 8 L9 16" stroke-dasharray="1.5,1.5"/>
+  </symbol>
+
+  <symbol id="i-brain" viewBox="0 0 24 24">
+    <path class="ic" d="M9 5 C5 5, 4 8, 5 11 C3 12, 3 15, 5 16 C5 19, 8 20, 10 19 L10 5 Z"/>
+    <path class="ic" d="M15 5 C19 5, 20 8, 19 11 C21 12, 21 15, 19 16 C19 19, 16 20, 14 19 L14 5 Z"/>
+    <path class="ic-dim" d="M9 9 L11 9 M9 13 L11 13 M13 9 L15 9 M13 13 L15 13"/>
+  </symbol>
+
+  <symbol id="i-skull" viewBox="0 0 24 24">
+    <path class="ic" d="M5 11 C5 6, 9 3, 12 3 C15 3, 19 6, 19 11 L19 14 L17 15 L17 18 L14 18 L14 16 L10 16 L10 18 L7 18 L7 15 L5 14 Z"/>
+    <circle class="ic-fill" cx="9" cy="11" r="1.6"/>
+    <circle class="ic-fill" cx="15" cy="11" r="1.6"/>
+    <path class="ic-dim" d="M11 14 L13 14"/>
+  </symbol>
+
+  <symbol id="i-map" viewBox="0 0 24 24">
+    <path class="ic" d="M3 6 L9 4 L15 6 L21 4 L21 18 L15 20 L9 18 L3 20 Z"/>
+    <path class="ic-dim" d="M9 4 L9 18 M15 6 L15 20"/>
+    <circle class="ic-fill" cx="12" cy="12" r="1.3"/>
+  </symbol>
+
+  <!-- ====== CHECKLIST: WEEK ====== -->
+  <symbol id="i-coffee" viewBox="0 0 24 24">
+    <path class="ic" d="M5 10 L5 18 Q5 20, 7 20 L15 20 Q17 20, 17 18 L17 10 Z"/>
+    <path class="ic" d="M17 12 Q21 12, 21 15 Q21 18, 17 18"/>
+    <path class="ic-dim" d="M9 5 Q9 7, 11 7 Q13 7, 11 9 M14 5 Q14 7, 12 9"/>
+  </symbol>
+
+  <symbol id="i-target" viewBox="0 0 24 24">
+    <circle class="ic" cx="12" cy="12" r="9"/>
+    <circle class="ic-dim" cx="12" cy="12" r="6"/>
+    <circle class="ic-dim" cx="12" cy="12" r="3"/>
+    <circle class="ic-fill" cx="12" cy="12" r="1.3"/>
+  </symbol>
+
+  <symbol id="i-bank" viewBox="0 0 24 24">
+    <path class="ic" d="M3 9 L12 4 L21 9"/>
+    <path class="ic" d="M5 9 L5 19 M9 9 L9 19 M15 9 L15 19 M19 9 L19 19"/>
+    <path class="ic" d="M3 19 L21 19 M3 21 L21 21"/>
+    <path class="ic-fill" d="M11 11 L13 11 L13 13 L11 13 Z"/>
+  </symbol>
+
+  <symbol id="i-handshake" viewBox="0 0 24 24">
+    <path class="ic" d="M4 12 L8 8 L10 10 L12 8 L14 10 L16 8 L20 12"/>
+    <path class="ic" d="M4 12 L4 16 L8 18 L12 18"/>
+    <path class="ic" d="M20 12 L20 16 L16 18 L12 18"/>
+  </symbol>
+
+  <!-- ====== RESOURCES ====== -->
+  <symbol id="i-beans" viewBox="0 0 24 24">
+    <ellipse class="ic-fill" cx="9" cy="12" rx="4" ry="6" transform="rotate(-15 9 12)"/>
+    <path d="M9 7 L9 17" stroke="#3a1c08" stroke-width="0.8" fill="none" transform="rotate(-15 9 12)"/>
+    <ellipse class="ic-fill" cx="15" cy="13" rx="4" ry="6" transform="rotate(20 15 13)"/>
+    <path d="M15 8 L15 18" stroke="#3a1c08" stroke-width="0.8" fill="none" transform="rotate(20 15 13)"/>
+  </symbol>
+
+  <symbol id="i-coffee-r" viewBox="0 0 24 24">
+    <path class="ic-fill" d="M5 10 L5 18 Q5 20, 7 20 L15 20 Q17 20, 17 18 L17 10 Z"/>
+    <path class="ic" d="M17 12 Q21 12, 21 15 Q21 18, 17 18"/>
+    <path d="M9 5 Q9 7, 11 7 Q13 7, 11 9" stroke="#d4900a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="i-gold" viewBox="0 0 24 24">
+    <path class="ic-fill" d="M12 3 L18 9 L18 15 L12 21 L6 15 L6 9 Z"/>
+    <path d="M12 7 L15 10 L15 14 L12 17 L9 14 L9 10 Z" fill="#f0c030" stroke="#a87020" stroke-width="0.8"/>
+    <path d="M12 9 L13 11 L12 13 L11 11 Z" fill="#fff5d0"/>
+  </symbol>
+
+  <symbol id="i-whiskey" viewBox="0 0 24 24">
+    <path class="ic" d="M7 4 L17 4 L16 12 Q16 16, 12 16 Q8 16, 8 12 Z"/>
+    <path class="ic-fill" d="M8 9 L16 9 L16 12 Q16 16, 12 16 Q8 16, 8 12 Z"/>
+    <line class="ic" x1="12" y1="16" x2="12" y2="20"/>
+    <line class="ic" x1="8" y1="20" x2="16" y2="20"/>
+  </symbol>
+
+  <!-- ====== ORNAMENTS ====== -->
+  <symbol id="i-diamond" viewBox="0 0 24 24">
+    <path class="ic-fill" d="M12 3 L18 12 L12 21 L6 12 Z"/>
+    <path d="M12 6 L15 12 L12 18 L9 12 Z" fill="#f0c030"/>
+  </symbol>
+</svg>

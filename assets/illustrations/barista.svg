@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" role="img" aria-label="Coffee bean sack">
+  <defs>
+    <linearGradient id="sack" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#d4b078"/>
+      <stop offset="0.6" stop-color="#a07840"/>
+      <stop offset="1" stop-color="#5a3010"/>
+    </linearGradient>
+    <linearGradient id="sack-shadow" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="rgba(0,0,0,0.4)"/>
+      <stop offset="0.5" stop-color="rgba(0,0,0,0)"/>
+      <stop offset="1" stop-color="rgba(0,0,0,0.4)"/>
+    </linearGradient>
+    <radialGradient id="bean" cx="0.5" cy="0.4" r="0.6">
+      <stop offset="0" stop-color="#6e3812"/>
+      <stop offset="1" stop-color="#2a1408"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Ground shadow -->
+  <ellipse cx="100" cy="225" rx="80" ry="6" fill="#000" opacity="0.5"/>
+
+  <!-- SACK body -->
+  <path d="M 35 80
+           Q 30 75, 35 70
+           L 165 70
+           Q 170 75, 165 80
+           L 175 200
+           Q 178 218, 160 220
+           L 40 220
+           Q 22 218, 25 200 Z"
+        fill="url(#sack)" stroke="#1c0e04" stroke-width="2.5"/>
+
+  <!-- Side shadows -->
+  <path d="M 35 80 L 45 200 L 40 220 L 25 200 Z" fill="url(#sack-shadow)" opacity="0.6"/>
+  <path d="M 165 80 L 155 200 L 160 220 L 175 200 Z" fill="url(#sack-shadow)" opacity="0.6" transform="scale(-1,1) translate(-200,0)"/>
+
+  <!-- Texture lines (burlap) -->
+  <g stroke="#3a1c08" stroke-width="0.5" opacity="0.3" fill="none">
+    <line x1="40" y1="90" x2="160" y2="90"/>
+    <line x1="40" y1="110" x2="160" y2="110"/>
+    <line x1="42" y1="130" x2="160" y2="130"/>
+    <line x1="44" y1="150" x2="160" y2="150"/>
+    <line x1="46" y1="170" x2="158" y2="170"/>
+    <line x1="48" y1="190" x2="156" y2="190"/>
+    <!-- vertical -->
+    <line x1="80" y1="80" x2="80" y2="215"/>
+    <line x1="100" y1="80" x2="100" y2="215"/>
+    <line x1="120" y1="80" x2="120" y2="215"/>
+  </g>
+
+  <!-- ROPE TIE at top -->
+  <ellipse cx="100" cy="75" rx="68" ry="8" fill="#5a3010" stroke="#1c0e04" stroke-width="2"/>
+  <path d="M 38 70 Q 100 50, 162 70" fill="none" stroke="#3a1c08" stroke-width="3"/>
+  <path d="M 38 70 Q 100 55, 162 70" fill="none" stroke="#a87040" stroke-width="1"/>
+
+  <!-- COFFEE BEANS spilling out at top -->
+  <g>
+    <ellipse cx="80" cy="62" rx="6" ry="9" fill="url(#bean)" transform="rotate(-15 80 62)" stroke="#1c0e04" stroke-width="0.8"/>
+    <path d="M 78 56 Q 80 62, 82 68" stroke="#d4a060" stroke-width="0.8" fill="none"/>
+
+    <ellipse cx="100" cy="58" rx="6" ry="9" fill="url(#bean)" transform="rotate(8 100 58)" stroke="#1c0e04" stroke-width="0.8"/>
+    <path d="M 99 52 Q 100 58, 101 64" stroke="#d4a060" stroke-width="0.8" fill="none"/>
+
+    <ellipse cx="120" cy="62" rx="6" ry="9" fill="url(#bean)" transform="rotate(20 120 62)" stroke="#1c0e04" stroke-width="0.8"/>
+    <path d="M 119 56 Q 120 62, 121 68" stroke="#d4a060" stroke-width="0.8" fill="none"/>
+
+    <ellipse cx="65" cy="68" rx="5" ry="8" fill="url(#bean)" transform="rotate(-30 65 68)" stroke="#1c0e04" stroke-width="0.8"/>
+    <ellipse cx="135" cy="65" rx="5" ry="8" fill="url(#bean)" transform="rotate(28 135 65)" stroke="#1c0e04" stroke-width="0.8"/>
+  </g>
+
+  <!-- LABEL / TAG -->
+  <g transform="translate(100 145)">
+    <path d="M -35 -25 L 35 -25 L 35 25 L 0 38 L -35 25 Z" fill="#ecdea8" stroke="#1c0e04" stroke-width="2"/>
+    <path d="M -35 -25 L 35 -25 L 35 25 L 0 38 L -35 25 Z" fill="none" stroke="#a06830" stroke-width="0.8" stroke-dasharray="2,2" transform="scale(0.9)"/>
+    <text x="0" y="-10" text-anchor="middle" font-family="Georgia, serif" font-size="9" font-weight="bold" fill="#5a3010" letter-spacing="1">COFFEE</text>
+    <text x="0" y="3" text-anchor="middle" font-family="Georgia, serif" font-size="9" font-weight="bold" fill="#5a3010" letter-spacing="1">BEANS</text>
+    <!-- coffee bean icon on label -->
+    <ellipse cx="0" cy="18" rx="6" ry="9" fill="url(#bean)" stroke="#1c0e04" stroke-width="0.8"/>
+    <path d="M -1 12 Q 0 18, 1 24" stroke="#d4a060" stroke-width="0.7" fill="none"/>
+  </g>
+
+  <!-- Star ornaments on sack -->
+  <g fill="#d4900a" opacity="0.8">
+    <path d="M 50 195 l 1.5 3 l 3.3 0.4 l -2.4 2.1 l 0.6 3.3 l -3 -1.7 l -3 1.7 l 0.6 -3.3 l -2.4 -2.1 l 3.3 -0.4 z"/>
+    <path d="M 150 195 l 1.5 3 l 3.3 0.4 l -2.4 2.1 l 0.6 3.3 l -3 -1.7 l -3 1.7 l 0.6 -3.3 l -2.4 -2.1 l 3.3 -0.4 z"/>
+  </g>
+</svg>

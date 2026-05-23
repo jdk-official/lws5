@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" role="img" aria-label="Longhorn skull">
+  <defs>
+    <linearGradient id="bone" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#f4e6c1"/>
+      <stop offset="0.5" stop-color="#e0cb95"/>
+      <stop offset="1" stop-color="#a88758"/>
+    </linearGradient>
+    <linearGradient id="bone-mid" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#d8c08a"/>
+      <stop offset="1" stop-color="#9a7848"/>
+    </linearGradient>
+    <radialGradient id="boneHi" cx="0.5" cy="0.3" r="0.55">
+      <stop offset="0" stop-color="#fff5d8" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#fff5d8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hornGrad" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#a07840"/>
+      <stop offset="0.4" stop-color="#e6cb8c"/>
+      <stop offset="0.85" stop-color="#6a4818"/>
+      <stop offset="1" stop-color="#2e1808"/>
+    </linearGradient>
+    <linearGradient id="hornGradR" x1="1" x2="0" y1="0" y2="0">
+      <stop offset="0" stop-color="#a07840"/>
+      <stop offset="0.4" stop-color="#e6cb8c"/>
+      <stop offset="0.85" stop-color="#6a4818"/>
+      <stop offset="1" stop-color="#2e1808"/>
+    </linearGradient>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background shadow under skull -->
+  <ellipse cx="240" cy="240" rx="120" ry="14" fill="#000" opacity="0.4"/>
+
+  <!-- LEFT HORN — sweep -->
+  <path d="M 195 110
+           C 165 80, 90 50, 35 65
+           C -5 78, -5 130, 30 145
+           C 70 162, 130 158, 175 138"
+        fill="url(#hornGrad)" stroke="#3a1e0a" stroke-width="2"/>
+  <!-- Left horn shading -->
+  <path d="M 175 138 C 130 156, 70 158, 35 145 C 0 132, 5 90, 35 80 C 70 70, 130 78, 175 100"
+        fill="none" stroke="#000" stroke-width="0.8" opacity="0.35"/>
+  <!-- Left horn ridges -->
+  <g stroke="#3a1e0a" stroke-width="0.7" opacity="0.5" fill="none">
+    <path d="M 25 110 Q 40 116, 60 118"/>
+    <path d="M 55 132 Q 75 138, 100 138"/>
+    <path d="M 110 148 Q 135 152, 160 145"/>
+  </g>
+
+  <!-- RIGHT HORN — sweep (mirror) -->
+  <path d="M 285 110
+           C 315 80, 390 50, 445 65
+           C 485 78, 485 130, 450 145
+           C 410 162, 350 158, 305 138"
+        fill="url(#hornGradR)" stroke="#3a1e0a" stroke-width="2"/>
+  <path d="M 305 138 C 350 156, 410 158, 445 145 C 480 132, 475 90, 445 80 C 410 70, 350 78, 305 100"
+        fill="none" stroke="#000" stroke-width="0.8" opacity="0.35"/>
+  <g stroke="#3a1e0a" stroke-width="0.7" opacity="0.5" fill="none">
+    <path d="M 455 110 Q 440 116, 420 118"/>
+    <path d="M 425 132 Q 405 138, 380 138"/>
+    <path d="M 370 148 Q 345 152, 320 145"/>
+  </g>
+
+  <!-- SKULL — main cranium -->
+  <path d="M 240 80
+           C 200 80, 175 100, 175 135
+           C 175 165, 185 185, 200 195
+           L 195 230
+           C 195 240, 205 248, 220 248
+           L 260 248
+           C 275 248, 285 240, 285 230
+           L 280 195
+           C 295 185, 305 165, 305 135
+           C 305 100, 280 80, 240 80 Z"
+        fill="url(#bone)" stroke="#5a3818" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- Skull highlight overlay -->
+  <ellipse cx="240" cy="130" rx="55" ry="40" fill="url(#boneHi)"/>
+
+  <!-- Horn nubs / attachment to skull -->
+  <path d="M 180 108 C 188 100, 200 100, 210 110 L 200 130 C 188 130, 180 122, 180 108 Z"
+        fill="url(#bone-mid)" stroke="#5a3818" stroke-width="1.5"/>
+  <path d="M 300 108 C 292 100, 280 100, 270 110 L 280 130 C 292 130, 300 122, 300 108 Z"
+        fill="url(#bone-mid)" stroke="#5a3818" stroke-width="1.5"/>
+
+  <!-- Brow ridge -->
+  <path d="M 195 145 Q 240 132, 285 145" fill="none" stroke="#5a3818" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- LEFT EYE SOCKET -->
+  <ellipse cx="215" cy="155" rx="16" ry="18" fill="#0a0402"/>
+  <ellipse cx="215" cy="155" rx="16" ry="18" fill="none" stroke="#5a3818" stroke-width="1.8"/>
+  <!-- Eye depth/highlight -->
+  <ellipse cx="210" cy="150" rx="4" ry="3" fill="#1a0e04"/>
+
+  <!-- RIGHT EYE SOCKET -->
+  <ellipse cx="265" cy="155" rx="16" ry="18" fill="#0a0402"/>
+  <ellipse cx="265" cy="155" rx="16" ry="18" fill="none" stroke="#5a3818" stroke-width="1.8"/>
+  <ellipse cx="260" cy="150" rx="4" ry="3" fill="#1a0e04"/>
+
+  <!-- NASAL CAVITY -->
+  <path d="M 232 188
+           C 232 182, 248 182, 248 188
+           L 250 210
+           C 250 215, 245 218, 240 218
+           C 235 218, 230 215, 230 210 Z"
+        fill="#0a0402" stroke="#5a3818" stroke-width="1.5"/>
+
+  <!-- Cheek bones -->
+  <path d="M 200 195 Q 208 215, 215 225" fill="none" stroke="#5a3818" stroke-width="1.5" opacity="0.5"/>
+  <path d="M 280 195 Q 272 215, 265 225" fill="none" stroke="#5a3818" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- JAW LINE -->
+  <path d="M 200 230 Q 240 245, 280 230" fill="none" stroke="#5a3818" stroke-width="2"/>
+
+  <!-- TEETH -->
+  <g stroke="#5a3818" stroke-width="1.4" stroke-linecap="round">
+    <line x1="216" y1="232" x2="216" y2="242"/>
+    <line x1="226" y1="234" x2="226" y2="246"/>
+    <line x1="236" y1="234" x2="236" y2="246"/>
+    <line x1="246" y1="234" x2="246" y2="246"/>
+    <line x1="256" y1="234" x2="256" y2="244"/>
+    <line x1="265" y1="232" x2="265" y2="242"/>
+  </g>
+
+  <!-- Subtle wear marks -->
+  <g opacity="0.25" stroke="#5a3818" stroke-width="0.6" fill="none">
+    <path d="M 195 110 Q 200 130, 198 165"/>
+    <path d="M 285 110 Q 280 130, 282 165"/>
+    <path d="M 220 200 L 225 222"/>
+    <path d="M 260 200 L 255 222"/>
+  </g>
+
+  <!-- Ornamental stars below -->
+  <g fill="#d4900a" filter="url(#soft)">
+    <path d="M 170 268 l 2.5 5 l 5.5 0.6 l -4 3.5 l 1 5.5 l -5 -2.8 l -5 2.8 l 1 -5.5 l -4 -3.5 l 5.5 -0.6 z"/>
+    <path d="M 240 270 l 3 6 l 6.6 0.7 l -4.8 4.2 l 1.2 6.6 l -6 -3.3 l -6 3.3 l 1.2 -6.6 l -4.8 -4.2 l 6.6 -0.7 z"/>
+    <path d="M 310 268 l 2.5 5 l 5.5 0.6 l -4 3.5 l 1 5.5 l -5 -2.8 l -5 2.8 l 1 -5.5 l -4 -3.5 l 5.5 -0.6 z"/>
+  </g>
+</svg>
