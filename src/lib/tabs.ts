@@ -4,12 +4,19 @@ import coffeeHtml from '../sections/coffee.html?raw';
 import banksHtml from '../sections/banks.html?raw';
 import trainsHtml from '../sections/trains.html?raw';
 
+// Rewrite absolute /assets/ paths to honour Vite's configured base
+// (e.g. /lws5/assets/...) — raw HTML imports are not processed by Vite.
+const BASE = import.meta.env.BASE_URL; // trailing slash
+function withBase(html: string): string {
+  return html.replace(/(["'(])\/assets\//g, `$1${BASE}assets/`);
+}
+
 const sections: Record<string, string> = {
-  overview: overviewHtml,
-  checklist: checklistHtml,
-  coffee: coffeeHtml,
-  banks: banksHtml,
-  trains: trainsHtml,
+  overview: withBase(overviewHtml),
+  checklist: withBase(checklistHtml),
+  coffee: withBase(coffeeHtml),
+  banks: withBase(banksHtml),
+  trains: withBase(trainsHtml),
 };
 
 type SectionMountedHandler = (target: string, root: HTMLElement) => void;
